@@ -789,6 +789,7 @@
                 "auth",
                 "laravel"
             ],
+            "abandoned": "laravel/sanctum",
             "time": "2020-03-12T13:34:05+00:00"
         },
         {
