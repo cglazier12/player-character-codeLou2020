@@ -5,7 +5,7 @@
 <div class="container main-content">
 
     <div id="app">
-        <toolbar></toolbar>
+
     </div>
 
 </div>
