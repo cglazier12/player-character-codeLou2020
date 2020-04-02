@@ -5,25 +5,25 @@
                 <button
                     class="col-3 text-center single-tab"
                     @click="switchComponent('stats')"
-                    :disabled="currentComp">
+                    :disabled="currentComp === 'stats'">
                     Stats
                 </button>
                 <button
                     class="col-3 text-center single-tab"
                     @click="switchComponent('background')"
-                    :disabled="currentComp">
+                    :disabled="currentComp === 'background'">
                     Background
                 </button>
                 <button
                     class="col-3 text-center single-tab"
                     @click="switchComponent('equipment')"
-                    :disabled="currentComp">
+                    :disabled="currentComp === 'equipment'">
                     Equipment
                 </button>
                 <button
                     class="col-3 text-center single-tab"
                     @click="switchComponent('spells')"
-                    :disabled="currentComp">
+                    :disabled="currentComp === 'spells'">
                     Spells
                 </button>
             </div>
