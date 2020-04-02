@@ -27,3 +27,7 @@ Route::get('send_test_email', function(){
         $message->to('chris.glazier12@gmail.com');
     });
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
