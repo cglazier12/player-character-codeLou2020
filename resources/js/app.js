@@ -1,32 +1,48 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+<template>
+    <div id="app">
+        <div>
+            <component :is="currentComp"></component>
+        </div>
 
-require('./bootstrap');
+        <toolbar :current-comp="currentComp"></toolbar>
+    </div>
+</template>
 
-window.Vue = require('vue');
+<script>
+    import Toolbar from './components/Toolbar.vue';
+    import Stats from './components/Stats.vue';
+    import Background from './components/Background.vue';
+    import Equipment from './components/Equipment.vue';
+    import Spells from './components/Spells.vue';
+    import { bus } from './index.js';
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
+    export default {
+        el: '#app',
 
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+        data() {
+            return {
+                currentComp: 'notes-list'
+            };
+        },
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+        created() {
+            bus.$on('switchComp', comp => {
+                this.currentComp = comp;
+            })
+        },
 
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
+        components: {
+            'toolbar': Toolbar,
+            'messages-list': Stats,
+            'notes-list': Background,
+            'other-list': Equipment,
+            'spells-list': Spells,
 
-const app = new Vue({
-    el: '#app',
-});
+        }
+    }
+
+</script>
+
+<style scoped>
+
+</style>

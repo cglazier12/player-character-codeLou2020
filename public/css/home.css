@@ -1,0 +1,32 @@
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+.main-content {
+    margin-top: 12vh;
+    height: 88vh;
+    padding: 15px;
+    background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
+}
+
+.tabs {
+    height: 6vh;
+    width: 100%;
+    padding: 0 10px;
+    position: fixed;
+    bottom: 10px;
+    z-index: 2;
+}
+
+.single-tab {
+    padding: 12px 0 0 0;
+    border-left: solid 1px #030303;
+}
+
+
+
+

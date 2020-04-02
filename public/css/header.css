@@ -1,0 +1,107 @@
+html, body {
+    background-color: #fff;
+    color: #303030;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    line-height: 1.0;
+}
+
+.header {
+    position: fixed;
+    height: 12vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff9ed;
+    filter: drop-shadow(2px 4px 4px #303030);
+}
+
+.player-character {
+    font-weight: 400;
+    color: #000;
+    margin: 0;
+}
+
+.top-left {
+    margin-top: auto;
+    padding: 0 0 5px 5px;
+}
+
+.top-right {
+    margin: auto 0 5px 0;
+    padding-bottom: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.links > a {
+    color: #303030;
+    padding: 0 15px;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.content h3 {
+    padding: 15px;
+    margin: 89px auto 0;
+    font-weight: 400;
+    text-align: center;
+}
+
+.content {
+    height: 100%;
+    margin: 0;
+    padding: 10px 25px 0 25px;
+    background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
+}
+
+.content p {
+    text-indent: 40px;
+    margin: 0;
+    padding: 15px 0;
+}
+
+.col-form-label {
+    font-size: 15px;
+}
+
+.form-control {
+    border-radius: 0;
+    transition: none;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #FFF9ED;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.form-control:focus {
+    border-radius: 0;
+    transition: none;
+    width: 100%;
+    height: 45px;
+    border: none;
+    background: #FFF9ED;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+button {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 20px;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 15px 0 25px 0;
+    text-decoration: none;
+    background: #fff9ED;
+    color: #000;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
