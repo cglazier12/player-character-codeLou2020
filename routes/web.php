@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home/{any}', function () {
+    return view('home');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -28,6 +32,4 @@ Route::get('send_test_email', function(){
     });
 });
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

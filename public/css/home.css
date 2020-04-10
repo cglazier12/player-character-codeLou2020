@@ -13,18 +13,22 @@ body {
     background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
 }
 
-.tabs {
-    height: 6vh;
-    width: 100%;
-    padding: 0 10px;
+.toolbar {
+    padding-top: 15px;
+    height: 7vh;
+    width: 92%;
     position: fixed;
     bottom: 10px;
-    z-index: 2;
+
+    border-top: solid 1px #303030;
 }
 
-.single-tab {
-    padding: 12px 0 0 0;
-    border-left: solid 1px #030303;
+.toolbar > a {
+    color: #303030;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 

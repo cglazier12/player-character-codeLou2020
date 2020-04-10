@@ -15,5 +15,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:api')->get('/user', function (Request $request) {
+    dd($request->user());
     return $request->user();
 });
+
+Route::resource('/cruds', 'CrudsController', [
+    'except' => ['delete', 'show', 'store']
+]);
