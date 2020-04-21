@@ -2,6 +2,8 @@ import Background from './components/Background';
 import Equipment from './components/Equipment';
 import Spells from './components/Spells';
 import Stats from './components/Stats';
+import Abilities from "./components/Stats/Abilities";
+import Proficiencies from "./components/Stats/Proficiencies";
 
 
 export default {
@@ -26,6 +28,16 @@ export default {
         {
             path: '/home/stats',
             component: Stats
+        },
+
+        {
+            path: '/home/stats/abilities',
+            component: Abilities
+        },
+
+        {
+            path: '/home/stats/proficiencies',
+            component: Proficiencies
         },
     ]
 }

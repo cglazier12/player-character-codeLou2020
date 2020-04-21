@@ -9,7 +9,7 @@ body {
 .main-content {
     margin-top: 12vh;
     height: 88vh;
-    padding: 15px;
+    padding: 8px 15px 15px 15px;
     background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
 }
 
