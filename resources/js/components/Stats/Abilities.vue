@@ -70,18 +70,18 @@
             </div>
             <div class="col-3 vitals">
                 <p>Speed</p>
-                <h4>30</h4>
+                <h4>{{ speed }}</h4>
             </div>
         </div>
 
         <div class="row">
             <div class="col-6 ability">
                 <p>Current HP</p>
-                <h4>12</h4>
+                <h4>{{ currentHP }}</h4>
             </div>
             <div class="col-6 ability">
                 <p>Temporary HP</p>
-                <h4>4</h4>
+                <h4>{{ tempHP }}</h4>
             </div>
         </div>
 
@@ -107,9 +107,16 @@
 </template>
 
 <script>
-  export default {
-    name: "Abilities"
-  }
+
+    export default {
+        name: "Abilities",
+        computed: {
+            tempHP () {
+                return store.state.tempHP
+            }
+        },
+    }
+
 </script>
 
 <style scoped>
