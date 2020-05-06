@@ -17,19 +17,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//if user is not authenticated it will reroute to login
 Route::get('/home/{any}', function () {
+    if (Auth::guest()) {
+        return redirect('login');
+    } else {
     return view('home');
+    }
 });
 
 Auth::routes();
 
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('send_test_email', function(){
-    Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
-    {
-        $message->to('chris.glazier12@gmail.com');
-    });
-});
+// The route below handles the HTTP initial fetch request from the front end to the SheetsController in app/HTTP/Controllers/SheetsController.php
+Route::post('/sheet/fetch', 'SheetsController@fetch');
+// The route below updates the database with any value the user may have changed in the front end
+Route::post('/sheet/update', 'SheetsController@update');
+
+
+//Route::get('send_test_email', function(){
+//    Mail::raw('Sending emails with Mailgun and Laravel is easy!', function($message)
+//    {
+//        $message->to('chris.glazier12@gmail.com');
+//    });
+//});
 
 
