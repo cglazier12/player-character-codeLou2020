@@ -1,78 +1,64 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+This is Chris Glaziers submission for the front end project class for spring 2020. There are a few steps needed to run this application on your local machine
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+STEP 1: The backend of this application is built using the php framework, Laravel. As such you will need a local environemnt set up in order to view it in a web browser. 
+    If on Windows I strongly recommend laragon.
+    If on Mac I strongly recommend MAMP. 
+    
+STEP 2: Clone the repo. 
+    If laragon it should be c\laragon\www
+    if mamp it should be c\MAMP\htdocs
+    
+STEP 3: download dependencies.
+    $ npm intall
+    you may have to run $ npm audit fix afterwards
+    
+    Important to note that this README will not cover installing PHP or installing composer. If you download laragon, both of these should be installed on your machine when installing that software. if using MAMP, it will download PHP on your machine but NOT composer. Refer to google for installing composer and PHP on your machine if issues arrise.
+    
+STEP 4: You will likely need to run $ composer update
 
-## About Laravel
+STEP 4.1: the .env file is ignored. you will need to go here https://github.com/laravel/laravel/blob/master/.env.example 
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+        copy and paste that and save it as .env in the root of the project directo 
+        
+        DB_CONNECTION=mysql
+        DB_HOST=127.0.0.1
+        DB_PORT=3306
+        DB_DATABASE=playerCharacter
+        DB_USERNAME=root
+        DB_PASSWORD=
+        
+        Good time to mention that you will need some database software. I use TablePlus
+        
+        this above code is the only part that is pertinant. You will need to create a mySQL connection that works the info placed here.
+        for example. my DB is called playerCharacter. and my username is root and i have no password set. Also note that localhost and port match what is displayed in your preferred DB managing software.
+    
+STEP 5: $ php artisan key:generate
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+STEP 6: I have included factories vie laravel that will allow you to create fake database entries so the dynamic content will load and be viewable. 
+        $php artisan tinker
+        
+        $ factory(App\Sheet::class, 5)->create();
+        
+        this will create 5 fake character sheets with appropriate values randomly assigned. the code for this login can be found in app\database\factories\SheetFactory. Note there is also a factory for users however the password is hashed so there is little benefit in running it. If interested in creasting fake users you can replace App\Sheet in the above syntax with App\User and create fake users. 
+        
+STEP 7: register your account
+        When I use laragon, my url is http://player-character-codelou2020.test/ 
+        
+        If you are using MAMP your url will be different.
+        
+STEP 8: Double check and make sure you user id in the database matches a sheet id created using php artisan tinker. I use laravel O-auth to handle registration and log in. If a users id doesnt match a sheet table id in the local instance you will see next to nothing. 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+The front end routing is handled through vue router. 
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+backend routes can be found in web.php. I use axios for all GET/POST requests. 
 
-## Laravel Sponsors
+controllers hold the backend logic, mainly fetching and updating the database for the particular user. app\Http\Controller\SheetController is where most of the logic is handled. 
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Some css can be found under \public but most styling is scoped in my vue components. 
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+This application was only ever designed to work on mobile, I use bootstrap grid for much of the layout consideration but it is plain ugly on desktop. Their are far better systems that are designed to work on a full screen such as an actual editable pdf of a DND 5e character sheet. This app looked to solve a unique problem so large screens were never considered. 
 
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+If any issues arise during the process of configuration reach out to me on slack and I will do what I can to help.
+        
