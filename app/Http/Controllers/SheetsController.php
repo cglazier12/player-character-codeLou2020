@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Sheet;
+use Spatie\QueryBuilder\QueryBuilder;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class SheetsController extends Controller
 {
-    public function fetch(Request $request)
+    // grab the user's sheet from the database
+    public function fetchAbility(Request $request)
     {
         $user = Auth::user();
         $id = $user->id;
@@ -20,7 +22,7 @@ class SheetsController extends Controller
         ]);
     }
 
-    public function update(Request $request)
+    public function updateAbility(Request $request)
     {
         $user = Auth::user();
         $id = $user->id;
@@ -49,4 +51,12 @@ class SheetsController extends Controller
             'success'
         ]);
     }
+
+    public function spells(Request $request)
+    {
+        $user = Auth::user();
+        $id = $user->id;
+    }
+
+
 }

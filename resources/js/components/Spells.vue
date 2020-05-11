@@ -76,6 +76,10 @@
         methods: {
             submitSpells() {
                 this.list.push({...this.spells})
+                // clear input fields after submission
+                this.spells.name = '';
+                this.spells.bonus = '';
+                this.spells.type = '';
             },
 
             removeSpells() {
@@ -86,6 +90,17 @@
                 console.log(this.list);
                 console.log(this.spells.bonus);
             }
+        },
+
+        beforeDestroy() {
+            let spells = this.spells
+            axios.post('/sheet/spells', spells )
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log(error);
+            });
         }
 
     }

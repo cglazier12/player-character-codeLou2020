@@ -76,6 +76,10 @@
       methods: {
         submitEquipment() {
             this.list.push({...this.equipment})
+            // clear input fields after submission
+            this.equipment.name = '';
+            this.equipment.bonus = '';
+            this.equipment.type = '';
         },
 
         removeEquipment() {

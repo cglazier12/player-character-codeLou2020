@@ -131,7 +131,7 @@
             }
         },
         mounted() {
-            axios.post('/sheet/fetch')
+            axios.post('/sheet/fetch/abilities')
 
             .then(response=>{
                 //this is necessary in vue or at least the way axios is bringing in the database object object
@@ -148,7 +148,7 @@
 
         beforeDestroy() {
             let update = this.sheet.sheet
-            axios.post('/sheet/update', update)
+            axios.post('/sheet/update/abilities', update)
             .then(function (response) {
                 console.log(response);
             })

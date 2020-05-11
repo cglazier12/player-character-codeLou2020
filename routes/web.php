@@ -33,9 +33,11 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 // The route below handles the HTTP initial fetch request from the front end to the SheetsController in app/HTTP/Controllers/SheetsController.php
-Route::post('/sheet/fetch', 'SheetsController@fetch');
+Route::post('/sheet/fetch/abilities', 'SheetsController@fetchAbility');
 // The route below updates the database with any value the user may have changed in the front end
-Route::post('/sheet/update', 'SheetsController@update');
+Route::post('/sheet/update/abilities', 'SheetsController@updateAbility');
+
+Route::post('/sheet/spells', 'SheetsController@spells');
 
 
 //Route::get('send_test_email', function(){
@@ -44,5 +46,8 @@ Route::post('/sheet/update', 'SheetsController@update');
 //        $message->to('chris.glazier12@gmail.com');
 //    });
 //});
+
+//Route Testing
+Route::get('/test', 'TestsController@testing');
 
 
