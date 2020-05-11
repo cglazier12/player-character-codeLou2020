@@ -30,23 +30,23 @@
             </div>
         </div>
 
-        <div class="form ">
+        <div class="form">
             <div class="">
                 <input
                     type="text"
-                    placeholder="item name"
+                    placeholder="Item name"
                     v-model="equipment.name">
             </div>
             <div class="">
                 <input
                     type="text"
-                    placeholder="bonus"
+                    placeholder="Bonus"
                     v-model="equipment.bonus">
                 </div>
             <div class="">
                 <input
                     type="text"
-                    placeholder="damage/type"
+                    placeholder="Damage/Type"
                     v-model="equipment.type">
             </div>
             <div class="d-flex justify-content-between">
@@ -64,6 +64,7 @@
     name: "Equipment",
       data() {
         return {
+            errors: [],
             list: [],
             equipment: {
                 name: '',
@@ -75,6 +76,7 @@
 
       methods: {
         submitEquipment() {
+
             this.list.push({...this.equipment})
             // clear input fields after submission
             this.equipment.name = '';

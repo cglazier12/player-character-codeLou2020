@@ -41,4 +41,14 @@ class User extends Authenticatable
     {
         return $this->hasOne(Sheet::class);
     }
+
+    public function items()
+    {
+        return $this->hasOne(Item::class);
+    }
+
+    public function spells()
+    {
+        return $this->hasOne(Spell::class);
+    }
 }

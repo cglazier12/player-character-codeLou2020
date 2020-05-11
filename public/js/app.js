@@ -2051,6 +2051,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   name: "Equipment",
   data: function data() {
     return {
+      errors: [],
       list: [],
       equipment: {
         name: '',
@@ -39279,7 +39280,7 @@ var render = function() {
         ])
       }),
       _vm._v(" "),
-      _c("div", { staticClass: "form " }, [
+      _c("div", { staticClass: "form" }, [
         _c("div", {}, [
           _c("input", {
             directives: [
@@ -39290,7 +39291,7 @@ var render = function() {
                 expression: "equipment.name"
               }
             ],
-            attrs: { type: "text", placeholder: "item name" },
+            attrs: { type: "text", placeholder: "Item name" },
             domProps: { value: _vm.equipment.name },
             on: {
               input: function($event) {
@@ -39313,7 +39314,7 @@ var render = function() {
                 expression: "equipment.bonus"
               }
             ],
-            attrs: { type: "text", placeholder: "bonus" },
+            attrs: { type: "text", placeholder: "Bonus" },
             domProps: { value: _vm.equipment.bonus },
             on: {
               input: function($event) {
@@ -39336,7 +39337,7 @@ var render = function() {
                 expression: "equipment.type"
               }
             ],
-            attrs: { type: "text", placeholder: "damage/type" },
+            attrs: { type: "text", placeholder: "Damage/Type" },
             domProps: { value: _vm.equipment.type },
             on: {
               input: function($event) {
