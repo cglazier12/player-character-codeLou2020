@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-center">
             <h5>Alignment</h5>
         </div>
-        <div class="row">
+        <div class=s">
             <div class="col-6 ability">
                 <p>Strength</p>
                 <div class="scores d-flex justify-content-around">
