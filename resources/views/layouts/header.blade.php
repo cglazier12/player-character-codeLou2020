@@ -33,7 +33,11 @@
 
             @endif
         </div>
+
 </header>
+<div class="hr">
+    <hr class="mx-auto">
+</div>
 
 <main>
     @yield('content')
