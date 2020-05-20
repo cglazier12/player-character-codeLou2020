@@ -1,15 +1,26 @@
+
 html, body {
+    background-color: #fff;
+    color: #303030;
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
     overflow-x: hidden;
 }
 
 body {
     position: relative;
+    background: linear-gradient(to right, #afc6d6 0%, #d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
 }
 
 .main-content {
-    height: 88vh;
     padding: 8px 15px 15px 15px;
-    background: linear-gradient(to right, #afc6d6 0%, #d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
+}
+
+.player-character {
+    color: #c40f0f;
+    margin-bottom: 6px;
 }
 
 .toolbar {
@@ -18,14 +29,24 @@ body {
     width: 92%;
     position: fixed;
     bottom: 10px;
+    border-top: solid 3px #c40f0f;
 
-    border-top: solid 1px #303030;
 }
 
 .toolbar > a {
-    color: #303030;
+    color: #c40f0f;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.links > a {
+    color: #c40f0f;
+    padding: 0 15px;
     font-size: 16px;
     font-weight: 300;
+    letter-spacing: .1rem;
     text-decoration: none;
     text-transform: uppercase;
 }
@@ -52,26 +73,40 @@ body {
 
 .col-form-label {
     font-size: 15px;
+    color: #c40f0f;
 }
 
 .form-control {
-    border-radius: 0;
+    border-radius: 6px;
     transition: none;
     width: 100%;
     height: 45px;
-    border: none;
-    background: #FFF9ED;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border: solid 2px #d6d6d6;
+    background: #FFF;
+
 }
 
 .form-control:focus {
-    border-radius: 0;
+    border-radius: 6px;
     transition: none;
     width: 100%;
     height: 45px;
-    border: none;
-    background: #FFF9ED;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+    border: solid 2px #c40f0f;
+    background: #afc6d6;
+    box-shadow: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #afc6d6 inset;
+    transition: background-color 5000s ease-in-out 0s;
 }
 
 button {

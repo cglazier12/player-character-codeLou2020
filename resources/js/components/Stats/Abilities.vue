@@ -3,7 +3,7 @@
         <div class="d-flex justify-content-center">
             <h5>Alignment</h5>
         </div>
-        <div class=s">
+        <div class="row">
             <div class="col-6 ability">
                 <p>Strength</p>
                 <div class="scores d-flex justify-content-around">
@@ -247,21 +247,21 @@
     /*Ability Section Styles*/
 
     .ability {
-        border-bottom: 1px solid #303030;
+        border-bottom: 1px solid #c40f0f;
     }
 
     .ability:first-child {
-        border-right: 1px solid #303030;
+        border-right: 1px solid #c40f0f;
     }
 
     /*Vitals Section Styles*/
 
     .vitals {
-        border-bottom: solid 1px #303030;
+        border-bottom: solid 1px #c40f0f;
     }
 
     .vitals:nth-child(-n+2) {
-        border-right: solid 1px #303030;
+        border-right: solid 1px #c40f0f;
     }
 
     .hit-dice {

@@ -1,7 +1,7 @@
-@extends('layouts.register')
+@extends('layouts.header')
 
 @section('content')
-<div class="container content">
+<div class="container main-content">
     <h3>Explore, Create, Level Up!</h3>
     <p>Your campaign lives here. Player Character provides a compendium of D&D 5e material to easily interact with your campaign as well as custom character sheets and personal templates, giving you access to the information you need so you can focus more on playing and less on clerical work.</p>
     <p>Search, organize, and display what you want. Player Character offers a minimalist interface for quick and easy navigation so you can stop staring at your character sheet and get back to the game!</p>

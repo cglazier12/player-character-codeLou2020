@@ -1,25 +1,15 @@
-html, body {
-    background-color: #fff;
-    color: #303030;
-    font-family: 'IBM Plex Mono', sans-serif;
-    font-weight: 200;
-    height: 100vh;
-    margin: 0;
-}
 
 h1 {
     line-height: 1.0;
 }
 
 .header {
-
     height: 12vh;
     width: 100%;
     top: 0;
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(to right, #afc6d6 0%, #d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
-    /*border-bottom: 2px solid #c40f0f;*/
+    border-bottom: 2px solid #c40f0f;
 }
 
 .hr {
@@ -47,61 +37,33 @@ hr {
     margin: auto 0 11px 0;
 }
 
-.links > a {
-    color: #303030;
-    padding: 0 15px;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
 
-.content h3 {
+
+/*
+    All css below is currently for welcome.blade.php and awaiting refactoring
+ */
+
+.register h3 {
     padding: 15px;
     margin: 89px auto 0;
     font-weight: 400;
     text-align: center;
 }
 
-.content {
+.register {
     height: 100%;
     margin: 0;
     padding: 10px 25px 0 25px;
     background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
 }
 
-.content p {
+.register p {
     text-indent: 40px;
     margin: 0;
     padding: 15px 0;
 }
 
-.col-form-label {
-    font-size: 15px;
-}
-
-.form-control {
-    border-radius: 0;
-    transition: none;
-    width: 100%;
-    height: 45px;
-    border: none;
-    background: #FFF9ED;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.form-control:focus {
-    border-radius: 0;
-    transition: none;
-    width: 100%;
-    height: 45px;
-    border: none;
-    background: #FFF9ED;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-button {
+.register button {
     font-family: 'IBM Plex Mono', sans-serif;
     font-size: 20px;
     border: none;
