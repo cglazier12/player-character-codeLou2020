@@ -9,7 +9,7 @@ h1 {
     top: 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #c40f0f;
+    border-bottom: 3px solid #c40f0f;
 }
 
 .hr {
@@ -24,17 +24,17 @@ hr {
 
 
 .player-character {
-    font-weight: 400;
-    color: #000;
     margin: 0;
+    font-weight: 400;
+    color: #c40f0f;
 }
 
 .top-left {
-    padding: 5px 0 0 5px;
+    margin: auto 0 6px 8px;
 }
 
 .top-right {
-    margin: auto 0 11px 0;
+    margin: auto 0 6px 0;
 }
 
 

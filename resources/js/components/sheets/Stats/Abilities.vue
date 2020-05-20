@@ -6,18 +6,30 @@
         <div class="row">
             <div class="col-6 ability">
                 <p>Strength</p>
+                <div class="d-flex justify-content-around">
+                    <div>
+                        <input v-model="sheet.sheet.strength"/>
+                    </div>
+                    <div class="mod-anchor">
+                        <input class="modifier"/>
+                    </div>
+                </div>
+
+
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.strength"/>
+
                     <h2>{{sheet.sheet.strength}}</h2>
-                    <h5>+ 3</h5>
+                    <h5>+3</h5>
                 </div>
             </div>
             <div class="col-6 ability">
                 <p>Dexterity</p>
+                <input v-model="sheet.sheet.dexterity"/>
+
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.dexterity"/>
+
                     <h2>{{sheet.sheet.dexterity}}</h2>
-                    <h5>- 1</h5>
+                    <h5>-1</h5>
                 </div>
             </div>
         </div>
@@ -25,18 +37,20 @@
         <div class="row">
             <div class="col-6 ability">
                 <p>Constitution</p>
+                <input v-model="sheet.sheet.constitution"/>
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.constitution"/>
+
                     <h2>{{sheet.sheet.constitution}}</h2>
-                    <h5>+ 2</h5>
+                    <h5>+2</h5>
                 </div>
             </div>
             <div class="col-6 ability">
                 <p>Intelligence</p>
+                <input v-model="sheet.sheet.intelligence"/>
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.intelligence"/>
+
                     <h2>{{sheet.sheet.intelligence}}</h2>
-                    <h5>  0</h5>
+                    <h5> 0</h5>
                 </div>
             </div>
         </div>
@@ -44,18 +58,20 @@
         <div class="row">
             <div class="col-6 ability">
                 <p>Wisdom</p>
+                <input v-model="sheet.sheet.wisdom"/>
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.wisdom"/>
+
                     <h2>{{sheet.sheet.wisdom}}</h2>
-                    <h5>+ 1</h5>
+                    <h5>+1</h5>
                 </div>
             </div>
             <div class="col-6 ability">
                 <p>Charisma</p>
+                <input v-model="sheet.sheet.charisma"/>
                 <div class="scores d-flex justify-content-around">
-                    <input v-model="sheet.sheet.charisma"/>
+
                     <h2>{{sheet.sheet.charisma}}</h2>
-                    <h5>+ 1</h5>
+                    <h5>+1</h5>
                 </div>
             </div>
         </div>
@@ -173,6 +189,7 @@
 
     h2 {
         margin-bottom: 5px;
+        margin-right: 15px;
     }
 
     h4 {
@@ -199,7 +216,24 @@
         color: transparent;
         padding: 0;
         height: 45px;
-        width: 50px;
+        width: 40%;
+    }
+
+    .mod-anchor {
+        position: relative;
+    }
+
+    .modifier {
+        border: none;
+        position: absolute;
+        bottom: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background: transparent;
+        color: transparent;
+        padding: 0;
+        height: 45px;
+        width: 40%;
     }
 
     .vitals {
@@ -271,16 +305,17 @@
 
     .tabs {
         position: absolute;
-        bottom: 80px;
-        left: 35px;
+        bottom: 4.6rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: #c40f0f;
     }
 
     .single-tab {
-        color: #303030;
+        color: #c40f0f;
         padding: 0 15px;
         font-size: 16px;
-        font-weight: 300;
-        letter-spacing: .1rem;
+        font-weight: 400;
         text-decoration: none;
         text-transform: uppercase;
     }

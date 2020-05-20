@@ -25,9 +25,10 @@
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
+                <a href="{{ url('/login') }}">Login</a>
                 <a href="{{ url('/test') }}">Test</a>
             @else
-                <a href="{{ route('login') }}">Login</a>
+
 
             @endauth
 
@@ -35,11 +36,9 @@
         </div>
 
 </header>
-<div class="hr">
-    <hr class="mx-auto">
-</div>
 
-<main>
+
+<main class="container main-content">
     @yield('content')
 </main>
 

@@ -209,16 +209,17 @@
 
     .tabs {
         position: absolute;
-        bottom: 80px;
-        left: 35px;
+        bottom: 4.6rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        color: #c40f0f;
     }
 
     .single-tab {
-        color: #303030;
+        color: #c40f0f;
         padding: 0 15px;
         font-size: 16px;
-        font-weight: 300;
-        letter-spacing: .1rem;
+        font-weight: 400;
         text-decoration: none;
         text-transform: uppercase;
     }

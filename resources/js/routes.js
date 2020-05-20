@@ -1,9 +1,9 @@
-import Background from './components/Background';
-import Equipment from './components/Equipment';
-import Spells from './components/Spells';
-import Stats from './components/Stats';
-import Abilities from "./components/Stats/Abilities";
-import Proficiencies from "./components/Stats/Proficiencies";
+import Background from './components/sheets/Background';
+import Equipment from './components/sheets/Equipment';
+import Spells from './components/sheets/Spells';
+import Stats from './components/sheets/Stats';
+import Abilities from "./components/sheets/Stats/Abilities";
+import Proficiencies from "./components/sheets/Stats/Proficiencies";
 
 
 export default {
@@ -39,5 +39,6 @@ export default {
             path: '/home/stats/proficiencies',
             component: Proficiencies
         },
+
     ]
 }
