@@ -1,9 +1,13 @@
+/*
+    Content below is for styling the Blade Components
+ */
+
 
 html, body {
     background-color: #fff;
     color: #303030;
     font-family: 'IBM Plex Mono', sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     height: 100vh;
     margin: 0;
     overflow-x: hidden;
@@ -14,9 +18,153 @@ body {
     background: linear-gradient(to right, #afc6d6 0%, #d6d6d6 30%,#d6d6d6 70%,#afc6d6 100%);
 }
 
+a {
+    color: #c40f0f;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #c40f0f;
+}
+
 .main-content {
     position: relative;
 }
+
+.call-to-action {
+    max-width: 690px;
+}
+
+.call-to-action:first-child {
+    padding-top: 15px;
+}
+
+.main-content h3 {
+    padding: 15px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.main-content p li {
+    text-indent: 40px;
+    max-width: 480px;
+    margin: auto;
+    padding: 15px 0;
+}
+
+.main-content ul {
+    padding: 10px 0;
+}
+
+.main-content li {
+    padding: 5px 0;
+}
+
+.col-form-label {
+    padding-left: 20px;
+    text-align: left;
+    font-size: 15px;
+    color: #c40f0f;
+}
+
+.form-control {
+    border-radius: 6px;
+    transition: none;
+    width: 100%;
+    height: 45px;
+    border: solid 2px #afc6d6;
+    background: #FFF;
+}
+
+.form-control:focus {
+    border-radius: 6px;
+    transition: none;
+    width: 100%;
+    height: 45px;
+    border: solid 2px #c40f0f;
+    background: #afc6d6;
+    box-shadow: none;
+}
+
+/*
+    .large-screens displays some content that is not normally visible on smaller devices
+ */
+
+.large-screens {
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .large-screens {
+        display: inline-block;
+    }
+}
+
+/*@media (max-width: 768px) {*/
+/*    .col-form-label {*/
+/*        padding-left: 20px;*/
+/*    }*/
+/*}*/
+
+/* This unruly guy below styles the input fields during select and google autofill */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #afc6d6 inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+button {
+    font-family: 'IBM Plex Mono', sans-serif;
+    font-size: 20px;
+    padding: 1rem 2rem;
+    margin: 15px 0 25px 0;
+    border: solid 2px #afc6d6;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #000;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* The rule immediately below regresses the accessibility of this application */
+button:focus {
+    outline:0;
+}
+
+button:hover {
+    border: solid 2px #c40f0f;
+}
+
+button:active {
+    border: solid 2px #c40f0f;
+    box-shadow: none;
+}
+/*
+    Content below is for login.blade.php
+ */
+
+.login {
+    padding: 100px 0;
+}
+
+.login-helper {
+    padding-left: 30px;
+}
+
+/*
+    Content above is for styling Blade Components
+ */
+
+/*
+    Content below is for base styling for Vue Components
+ */
 
 .vue-content {
     height: 80vh;
@@ -36,86 +184,6 @@ body {
     font-weight: 400;
     text-decoration: none;
     text-transform: uppercase;
-}
-
-.links > a {
-    color: #c40f0f;
-    padding: 0 15px;
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: .1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-.content h3 {
-    padding: 15px;
-    margin: 89px auto 0;
-    font-weight: 400;
-    text-align: center;
-}
-
-.content {
-    height: 100%;
-    margin: 0;
-    padding: 10px 25px 0 25px;
-    background: linear-gradient(180.0deg, #FFF9ED 25%, rgba(255, 255, 255, 0.71) 100.0%);
-}
-
-.content p {
-    text-indent: 40px;
-    margin: 0;
-    padding: 15px 0;
-}
-
-.col-form-label {
-    font-size: 15px;
-    color: #c40f0f;
-}
-
-.form-control {
-    border-radius: 6px;
-    transition: none;
-    width: 100%;
-    height: 45px;
-    border: solid 2px #d6d6d6;
-    background: #FFF;
-
-}
-
-.form-control:focus {
-    border-radius: 6px;
-    transition: none;
-    width: 100%;
-    height: 45px;
-    border: solid 2px #c40f0f;
-    background: #afc6d6;
-    box-shadow: none;
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #afc6d6 inset;
-    transition: background-color 5000s ease-in-out 0s;
-}
-
-button {
-    font-family: 'IBM Plex Mono', sans-serif;
-    font-size: 20px;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 15px 0 25px 0;
-    text-decoration: none;
-    background: #fff9ED;
-    color: #000;
-    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 

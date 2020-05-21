@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Laravel</title>
+    <title>Player Character</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:300,400,700&display=swap" rel="stylesheet">
@@ -25,10 +25,10 @@
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
-                <a href="{{ url('/login') }}">Login</a>
                 <a href="{{ url('/test') }}">Test</a>
+                <a href="{{ url('/logout') }}">Logout</a>
             @else
-
+                <a href="{{ url('/login') }}">Login</a>
 
             @endauth
 
