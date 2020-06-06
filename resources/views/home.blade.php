@@ -2,7 +2,7 @@
 
 @section('content')
 {{--<div class="container main-content">--}}
-
+{{--mamp test--}}
 
     <div id="app">
         <div class="vue-content">
